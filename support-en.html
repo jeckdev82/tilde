@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Tilde</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        h2 {
+            color: #374151;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+        }
+
+        h3 {
+            color: #4b5563;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            color: #374151;
+            font-size: 1.05em;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-left: 4px solid #0ea5e9;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #10b981;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .faq-answer {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-email {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 1.2em;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .app-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .info-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-value {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 5px;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            color: #6b7280;
+        }
+
+        .section-icon {
+            margin-right: 10px;
+            color: #10b981;
+        }
+
+        @media (max-width: 768px) {
+            .support-card {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="support-card">
+            <div class="header">
+                <div class="app-icon">~</div>
+                <h1>Tilde Support</h1>
+                <p class="subtitle">Help center and information</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Welcome to Tilde support center!</strong> Here you'll find all the information you need to get the most out of your subscription management app.</p>
+            </div>
+
+            <h2><span class="section-icon">📱</span>App Information</h2>
+            
+            <p>Tilde is a modern and intuitive application designed to help you keep track of all your subscriptions and recurring expenses. With an elegant interface and advanced features, Tilde lets you always stay in control of your finances.</p>
+
+            <div class="app-info-grid">
+                <div class="info-item">
+                    <div class="info-value">iOS 18.5+</div>
+                    <div class="info-label">Minimum Requirements</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">English</div>
+                    <div class="info-label">Primary Language</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">Josnapp</div>
+                    <div class="info-label">Developer</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">Free</div>
+                    <div class="info-label">Download</div>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">✨</span>Key Features</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Subscription Management</h3>
+                    <p>Easily add and manage all your subscriptions with complete details: cost, frequency, category, and renewal dates.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Reminders</h3>
+                    <p>Receive customizable notifications before renewal dates so you never miss an important subscription.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Advanced Statistics</h3>
+                    <p>View detailed charts and analytics of your monthly and annual spending by category.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Customizable Widgets</h3>
+                    <p>Add home screen widgets to quickly monitor upcoming renewals and total expenses.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Backup and Sync</h3>
+                    <p>Export your data in JSON format for secure backups and transfers between devices.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Currency</h3>
+                    <p>Support for multiple currencies with automatic conversion and local formatting.</p>
+                </div>
+            </div>
+
+            <h2><span class="section-icon">❓</span>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add a new subscription?</div>
+                <div class="faq-answer">Tap the "+" button on the main screen, choose a service from the predefined list or create a custom one, enter the details, and save.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I customize notifications?</div>
+                <div class="faq-answer">Yes! In each subscription's settings, you can choose how many days before renewal to receive the notification (from 1 to 30 days).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does data backup work?</div>
+                <div class="faq-answer">Go to Settings > Backup, tap "Export" to save all your data in a JSON file. You can then import this file on other devices.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my data secure?</div>
+                <div class="faq-answer">Absolutely! All data is stored only on your device using Apple's SwiftData technology. No information is sent to external servers.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add a widget to the home screen?</div>
+                <div class="faq-answer">Long press on the home screen, tap the "+" in the top left, search for "Tilde" and choose your preferred widget size.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I change currency?</div>
+                <div class="faq-answer">Yes, go to Settings > Currency and choose from supported currencies. The change will apply to all new subscriptions.</div>
+            </div>
+
+            <div class="info-card">
+                <p><strong>💡 Tip:</strong> To get the most out of Tilde, explore all available categories, customize notifications for each service, and use widgets for quick access to information.</p>
+            </div>
+
+            <h2><span class="section-icon">🛠</span>Troubleshooting</h2>
+
+            <h3>App won't open or crashes</h3>
+            <ul>
+                <li>Make sure you have iOS 18.5 or later</li>
+                <li>Restart the app by closing it from multitasking</li>
+                <li>Restart your device</li>
+                <li>Check that you have the latest version of the app</li>
+            </ul>
+
+            <h3>Notifications not working</h3>
+            <ul>
+                <li>Check that notifications are enabled in iOS Settings</li>
+                <li>Verify app-specific notification settings</li>
+                <li>Make sure the subscription has notifications enabled</li>
+            </ul>
+
+            <h3>Backup issues</h3>
+            <ul>
+                <li>Verify you have enough space on your device</li>
+                <li>Make sure the backup file is accessible</li>
+                <li>Check that the file is in valid JSON format</li>
+            </ul>
+
+            <h2><span class="section-icon">📧</span>Privacy and Security</h2>
+            <p>Tilde is designed with privacy first:</p>
+            <ul>
+                <li><strong>Local data:</strong> All information stays on your device</li>
+                <li><strong>No tracking:</strong> We don't monitor your usage</li>
+                <li><strong>Encryption:</strong> Data is protected by native iOS security</li>
+                <li><strong>Transparency:</strong> Clean code that respects privacy</li>
+            </ul>
+
+            <p>For detailed information, see our <a href="https://jeckdev82.github.io/tilde/privacy-policy-en.html" target="_blank">Privacy Policy</a>.</p>
+
+            <div class="contact-section">
+                <h2>Need Help?</h2>
+                <p>Our support team is here to help! For any questions, technical issues, or suggestions, don't hesitate to contact us.</p>
+                
+                <div class="contact-email">
+                    📧 jeck.dev82@gmail.com
+                </div>
+                
+                <p><strong>Response time:</strong> We usually respond within 24-48 hours during business days.</p>
+                
+                <p><strong>What to include in your email:</strong></p>
+                <ul style="text-align: left; max-width: 400px; margin: 20px auto;">
+                    <li>App and iOS version</li>
+                    <li>Detailed problem description</li>
+                    <li>Screenshots if necessary</li>
+                    <li>Steps to reproduce the issue</li>
+                </ul>
+                
+                <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+                    We're always happy to receive feedback and suggestions to improve Tilde!
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; font-style: italic; color: #6b7280;">
+                <p>Last updated: January 8, 2025</p>
+                <p>Tilde v1.0 - Made with ❤️ in Italy</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tilde</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .privacy-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        h2 {
+            color: #374151;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h3 {
+            color: #4b5563;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+        }
+
+        p, li {
+            margin-bottom: 15px;
+            color: #374151;
+            font-size: 1.05em;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin: 5px 10px 5px 0;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-card {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="privacy-card">
+            <div class="header">
+                <div class="app-icon">~</div>
+                <h1>Privacy Policy</h1>
+                <p class="subtitle">Tilde - Subscription Manager</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>🔒 Privacy First:</strong> Tilde is designed to keep your data completely private and secure. All your subscription and personal information remains exclusively on your device.</p>
+            </div>
+
+            <h2>1. Data Collection</h2>
+            
+            <h3>Data we DON'T collect:</h3>
+            <ul>
+                <li>No personal data is transmitted to our servers</li>
+                <li>We don't collect information about your subscriptions</li>
+                <li>We don't monitor your app usage</li>
+                <li>We don't collect location data</li>
+                <li>We don't access your contacts or photos</li>
+                <li>We don't use tracking cookies</li>
+            </ul>
+
+            <div class="security-badge">🛡️ Zero Data Collection</div>
+            <div class="security-badge">📱 Device Only Storage</div>
+            <div class="security-badge">🚫 No Tracking</div>
+
+            <h3>Data stored locally:</h3>
+            <ul>
+                <li>Your subscription information (name, cost, renewal date)</li>
+                <li>Login credentials (if entered, stored only on device)</li>
+                <li>App preferences and notification settings</li>
+                <li>Custom logos uploaded by user</li>
+            </ul>
+
+            <h2>2. Data Storage</h2>
+            
+            <p>All your data is stored exclusively on your device using:</p>
+            <ul>
+                <li><strong>SwiftData:</strong> Apple's local persistence framework</li>
+                <li><strong>App Group Container:</strong> For secure sharing between main app and widget</li>
+                <li><strong>Keychain (if needed):</strong> For sensitive data like credentials</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>🔐 Local Security:</strong> Your data is protected by iOS native security measures and never leaves your device, unless you choose to back up via iCloud (managed directly by Apple).</p>
+            </div>
+
+            <h2>3. Third-Party Services</h2>
+
+            <h3>RevenueCat</h3>
+            <p>To manage in-app purchases, we use RevenueCat, a subscription management service. RevenueCat may collect:</p>
+            <ul>
+                <li>Purchase information (transaction ID, purchase date)</li>
+                <li>Anonymous device identifier for subscription management</li>
+                <li>Subscription status and purchase history</li>
+            </ul>
+            <p>For more information, see <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat's Privacy Policy</a>.</p>
+
+            <h2>4. Advertising</h2>
+            
+            <div class="highlight-box">
+                <p><strong>✅ No Advertising:</strong> Tilde is completely ad-free. We don't use advertising networks, show ads, or share your data with advertisers.</p>
+            </div>
+
+            <h2>5. Data Sharing</h2>
+            
+            <p>We do not share, sell, or transfer your personal data to third parties, except:</p>
+            <ul>
+                <li>When required by law or competent authorities</li>
+                <li>To protect our legal rights</li>
+                <li>With your explicit consent</li>
+            </ul>
+
+            <h2>6. Security</h2>
+            
+            <p>Your data security is our priority:</p>
+            <ul>
+                <li>We only use Apple's native security frameworks</li>
+                <li>Data remains encrypted on your device</li>
+                <li>We don't transmit sensitive information over the internet</li>
+                <li>The app is subject to App Store's strict security measures</li>
+            </ul>
+
+            <h2>7. Your Rights</h2>
+            
+            <p>Since all data remains on your device, you have complete control:</p>
+            <ul>
+                <li><strong>Access:</strong> You can view all your data in the app</li>
+                <li><strong>Modify:</strong> You can edit or update any information</li>
+                <li><strong>Delete:</strong> You can delete data or uninstall the app</li>
+                <li><strong>Portability:</strong> Your data is accessible via iCloud backup</li>
+            </ul>
+
+            <h2>8. Changes to Privacy Policy</h2>
+            
+            <p>Any changes to this privacy policy will be communicated through:</p>
+            <ul>
+                <li>App update with notification of changes</li>
+                <li>Publishing the new version on this page</li>
+            </ul>
+
+            <div class="contact-section">
+                <h2>Contact</h2>
+                <p>For questions about this privacy policy or to exercise your rights, contact us:</p>
+                <p><strong>Email:</strong> privacy@tilde-app.com</p>
+                <p><strong>Developer:</strong> Josnapp</p>
+            </div>
+
+            <div class="last-updated">
+                <p>Last updated: January 8, 2025</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
